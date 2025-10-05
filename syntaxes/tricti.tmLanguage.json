@@ -31,15 +31,15 @@
       "patterns": [
         {
           "name": "keyword.control.tricti",
-          "match": "\\b(if|else|while|for|match|ret|cont|break|in|async|await|extern|from|where)\\b"
+          "match": "\\b(if|else|loop|while|for|match|ret|cont|break|in|async|await|extern|from|where)\\b"
         },
         {
           "name": "keyword.other.tricti",
-          "match": "\\b(db|table|compose|struct|enum|impl|trait|use|mod|pub|let|mut|const|static|fn|type|where|self|Self|super|crate|sys|shader|vert|frag|comp|new|emit|select|from|on|join|inner|left|right|full|query|res)\\b"
+          "match": "\\b(db|table|compose|struct|enum|impl|trait|use|mod|pub|let|mut|const|static|fn|type|where|self|Self|super|package|sys|shader|vert|frag|comp|new|emit|select|from|on|join|inner|left|right|full|query|res)\\b"
         },
         {
           "name": "storage.type.tricti",
-          "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|str|string|none|some)\\b"
+          "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|str|string|none|some|ok|err)\\b"
         }
       ]
     },
@@ -58,14 +58,12 @@
         },
         {
           "name": "string.quoted.single.tricti",
-          "begin": "'",
-          "end": "'",
-          "patterns": [
-            {
-              "name": "constant.character.escape.tricti",
-              "match": "\\\\."
-            }
-          ]
+          "match": "'(\\\\.|[^\\\\'])'"
+        },
+        {
+          "name": "string.quoted.raw.tricti",
+          "begin": "r#\"",
+          "end": "\"#"
         }
       ]
     },
@@ -101,27 +99,27 @@
         },
         {
           "name": "keyword.operator.comparison.tricti",
-          "match": "(==|!=|<|>|<=|>=|~=)"
+          "match": "(==|<|>|<=|>=|~=)"
         },
         {
           "name": "keyword.operator.arithmetic.tricti",
-          "match": "(\\+|-|\\*|/|%)"
+          "match": "(\\+|-|\\*|/|%|\\.\\+|\\.-|\\.\\*|\\./|\\.%)"
         },
         {
           "name": "keyword.operator.logical.tricti",
-          "match": "(&&|\\|\\||!|~)"
+          "match": "(and|or|xor|not|~)"
         },
         {
           "name": "keyword.operator.bitwise.tricti",
-          "match": "(&|\\||\\^|<<|>>)"
+          "match": "(and|or|xor|not|~)"
         },
         {
           "name": "keyword.operator.access.tricti",
-          "match": "(\\.|->|::)"
+          "match": "(\\.|::)"
         },
         {
           "name": "keyword.operator.range.tricti",
-          "match": "(\\.\\.|\\.\\.=)"
+          "match": "(:|\\.\\.)"
         }
       ]
     },
@@ -151,7 +149,7 @@
     },
     "constants": {
       "patterns": [
-        {
+          {
           "name": "constant.language.boolean.tricti",
           "match": "\\b(true|false)\\b"
         },
