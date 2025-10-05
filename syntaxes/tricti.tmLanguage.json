@@ -31,7 +31,7 @@
       "patterns": [
         {
           "name": "keyword.control.tricti",
-          "match": "\\b(if|else|while|for|match|ret|continue|break|in|async|await|extern)\\b"
+          "match": "\\b(if|else|while|for|match|ret|cont|break|in|async|await|extern|from|where)\\b"
         },
         {
           "name": "keyword.other.tricti",
