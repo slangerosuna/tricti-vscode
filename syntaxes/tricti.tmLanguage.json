@@ -31,15 +31,15 @@
       "patterns": [
         {
           "name": "keyword.control.tricti",
-          "match": "\\b(if|else|loop|while|for|match|ret|cont|break|in|async|await|extern|from|where)\\b"
+          "match": "\\b(do|if|elif|else|loop|while|for|match|ret|cont|break|in|async|await|extern|from|where|unsafe)\\b"
         },
         {
           "name": "keyword.other.tricti",
-          "match": "\\b(db|table|compose|struct|enum|impl|trait|use|mod|pub|let|mut|const|static|fn|type|where|self|Self|super|package|sys|shader|vert|frag|comp|new|emit|select|from|on|join|inner|left|right|full|query|res|as|in|raw)\\b"
+          "match": "\\b(db|table|compose|struct|enum|impl|trait|use|mod|pub|mut|const|static|type|where|self|Self|super|package|sys|shader|vert|frag|comp|new|emit|select|from|on|join|inner|left|right|full|query|res|as|in|raw|mut)\\b"
         },
         {
           "name": "storage.type.tricti",
-          "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|str|string|none|some|ok|err)\\b"
+          "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|none|some|ok|err)\\b"
         }
       ]
     },
